@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>DorStroyService</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css" rel="stylesheet"
+    type="text/css">
+  <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+
+</head>
+
+<body>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <a class="sidebar__brand" href="index.html">
+        <span class="full">DorStroyService</span>
+      </a>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <div id="accordionExample">
+          <div class="sidebar__item">
+            <a class="sidebar__link collapsed">
+              <div class="icon">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 512 512"
+                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                  <path
+                    d="M333.187,237.405c32.761-23.893,54.095-62.561,54.095-106.123C387.282,58.893,328.389,0,256,0 S124.718,58.893,124.718,131.282c0,43.562,21.333,82.23,54.095,106.123C97.373,268.57,39.385,347.531,39.385,439.795 c0,39.814,32.391,72.205,72.205,72.205H400.41c39.814,0,72.205-32.391,72.205-72.205 C472.615,347.531,414.627,268.57,333.187,237.405z M164.103,131.282c0-50.672,41.225-91.897,91.897-91.897 s91.897,41.225,91.897,91.897S306.672,223.18,256,223.18S164.103,181.954,164.103,131.282z M400.41,472.615H111.59 c-18.097,0-32.82-14.723-32.82-32.821c0-97.726,79.504-177.231,177.231-177.231s177.231,79.504,177.231,177.231 C433.231,457.892,418.508,472.615,400.41,472.615z" />
+                </svg>
+              </div>
+              <span>Контрагенты</span>
+            </a>
+          </div>
+          <div class="sidebar__item">
+            <div id="headingTwo">
+              <a class="sidebar__link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                <div class="icon">
+                  <svg width="15" height="15" fill="currentColor" viewBox="0 0 512 512"
+                    enable-background="new 0 0 512 512">
+                    <polygon points="352,208 352,256 352,272 448,272 448,256 416.721,208  " />
+                    <path
+                      d="m510.078,231.766l-47.82-80c-2.891-4.82-7.922-7.766-13.539-7.766h-128.719v-64c0-8.836-6.445-16-15.281-16h-288c-8.836,0-16.719,7.164-16.719,16v304c0,8.836 7.883,16 16.719,16h66.272c7.156,27.523 31.995,48 61.728,48 29.732,0 54.571-20.477 61.728-48h98.273 34.272c7.156,27.523 31.995,48 61.728,48 29.732,0 54.571-20.477 61.727-48h34.273c8.836,0 15.281-7.164 15.281-16v-144c-0.001-2.898-0.431-5.742-1.923-8.234zm-478.078-135.766h256v64 208h-81.554c-7.156-27.523-31.995-48-61.728-48-29.732,0-54.571,20.477-61.728,48h-50.99v-272zm112.719,320c-17.648,0-32-14.352-32-32s14.351-32 32-32c17.648,0 32,14.352 32,32s-14.352,32-32,32zm256,0c-17.648,0-32-14.352-32-32s14.352-32 32-32c17.648,0 32,14.352 32,32s-14.352,32-32,32zm79.281-48h-17.554c-7.156-27.523-31.995-48-61.727-48-29.733,0-54.571,20.477-61.728,48h-18.991v-192h119.656l40.344,68.43v123.57z" />
+                  </svg>
+                </div>
+                <span>Реестр техники</span>
+              </a>
+            </div>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <ul>
+                <li><a href="">Легковые</a></li>
+                <li><a href="">Спецтехника</a></li>
+                <li><a href="">Грузовые</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar__item">
+            <a href="" class="sidebar__link collapsed">
+              <div class="icon">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 512.064 512.064"
+                  style="enable-background:new 0 0 512.064 512.064;" xml:space="preserve">
+                  <path
+                    d="M482.595,1.647l-469.333,192c-19.739,8.075-16.722,36.919,4.261,40.734l220.136,40.025l40.025,220.136 c3.815,20.983,32.659,24,40.734,4.261l192-469.333C517.58,11.962,500.103-5.516,482.595,1.647z M306.592,415.024l-29.597-162.782 c-1.589-8.742-8.431-15.584-17.173-17.173L97.04,205.472L451.666,60.398L306.592,415.024z" />
+                </svg>
+              </div>
+              <span>Путевые листы</span>
+            </a>
+          </div>
+          <div class="sidebar__item">
+            <a href="" class="sidebar__link collapsed">
+              <div class="icon">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 334 334"
+                  style="enable-background:new 0 0 334 334;" xml:space="preserve">
+                  <path
+                    d="M298.6,84.4c0.4-0.4,0.4-0.4,0-0.8c0-0.4-0.4-0.8-0.4-1.2c0-0.4-0.4-0.4-0.4-0.8c0-0.4-0.4-0.8-0.4-1.2 c0-0.4-0.4-0.4-0.4-0.8c-0.4-0.4-0.4-0.8-0.8-0.8l-76-76c-0.4-0.4-1.2-0.8-1.6-1.2c-0.4,0-0.4-0.4-0.8-0.4 c-0.4-0.4-0.8-0.4-1.2-0.4c-0.4,0-0.4,0-0.8-0.4c-0.4,0-0.8-0.4-1.2-0.4c-0.4,0-1.2,0-1.6,0h-0.4H73.8C63,0,53.4,4.4,46.2,11.6 C39,18.4,35,28.4,35,38.8v256c0,10.8,4.4,20.4,11.6,27.6c7.2,7.2,16.8,11.6,27.6,11.6h186.4c10.8,0,20.4-4.4,27.6-11.6 c6.8-7.2,10.8-17.2,10.8-27.6V86.4C299,85.6,299,84.8,298.6,84.4z M222.6,34.8L264.2,76h-22.8c-5.2,0-9.6-2-13.2-5.6 c-3.2-3.2-5.6-8-5.6-13.2V34.8z M278.6,294.8c0,5.2-2,9.6-5.6,13.2c-3.2,3.2-8,5.6-13.2,5.6h-186c-5.2,0-9.6-2-13.2-5.6 c-3.2-3.2-5.6-8-5.6-13.2v-256c0-5.2,2-9.6,5.6-13.2c3.2-3.2,8-5.6,13.2-5.6h128.4v37.2c0,10.8,4.4,20.4,11.6,27.6 s16.8,11.6,27.6,11.6h37.2V294.8z" />
+                  <path
+                    d="M241,123.6H93c-5.6,0-10.4,4.4-10.4,10.4S87,144.4,93,144.4h148c5.6,0,10.4-4.4,10.4-10.4S247,123.6,241,123.6z" />
+                  <path
+                    d="M241,189.2H93c-5.6,0-10.4,4.4-10.4,10.4c0,5.6,4.4,10.4,10.4,10.4h148c5.6,0,10.4-4.4,10.4-10.4 C251,194,246.6,189.2,241,189.2z" />
+                  <path
+                    d="M241,254.8H93c-5.6,0-10.4,4.4-10.4,10.4c0,5.6,4.4,10.4,10.4,10.4h148c5.6,0,10.4-4.4,10.4-10.4 C251,259.6,246.6,254.8,241,254.8z" />
+                </svg>
+              </div>
+              <span>ТТН</span>
+            </a>
+          </div>
+          <div class="sidebar__item">
+            <a href="" class="sidebar__link collapsed">
+              <div class="icon">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 294.465 294.465"
+                  style="enable-background:new 0 0 294.465 294.465;">
+                  <path
+                    d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2 c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8 s55.6-12,74.8-31.2c19.2-19.2,31.2-45.6,31.2-74.8C253.232,148.465,206.032,78.865,174.432,32.465z M207.632,248.865 c-15.6,15.6-36.8,24.8-60.4,24.8c-23.6,0-44.8-9.6-60.4-24.8c-15.6-15.6-24.8-36.8-24.8-60.4c0-33.6,45.2-100.4,75.2-144.8 c3.6-5.2,6.8-10.4,10-14.8c3.2,4.4,6.4,9.6,10,14.8c30,44.8,75.2,111.2,75.2,144.8 C232.432,212.065,222.832,233.265,207.632,248.865z" />
+                  <path
+                    d="M209.232,181.265c-5.6-0.4-10.4,4-10.8,9.6c-0.4,8.8-3.2,17.2-7.6,24.4c-4.4,7.2-10.8,13.6-18.4,17.6 c-4.8,2.8-6.8,9.2-4,14c3.2,5.6,9.6,7.2,14.4,4.4c10.8-6,19.6-14.8,25.6-24.8c6.4-10,10-22,10.4-34.4 C219.232,186.465,214.832,181.665,209.232,181.265z" />
+                </svg>
+              </div>
+              <span>Заправки</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-xxl">
+    <div class="wrapper min-vh-100">
+      <aside class="sidebar-menu">
+        <ul class="navbar-nav sidebar">
+          <a class="sidebar__brand" href="index.html">
+            <span class="full">DorStroyService</span>
+            <span class="cut">DSS</span>
+          </a>
+          <div class="sidebar__accordion" id="accordionExample">
+            <div class="sidebar__item">
+              <a class="sidebar__link collapsed">
+                <div class="icon">
+                  <svg width="15" height="15" fill="currentColor" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <path
+                      d="M333.187,237.405c32.761-23.893,54.095-62.561,54.095-106.123C387.282,58.893,328.389,0,256,0 S124.718,58.893,124.718,131.282c0,43.562,21.333,82.23,54.095,106.123C97.373,268.57,39.385,347.531,39.385,439.795 c0,39.814,32.391,72.205,72.205,72.205H400.41c39.814,0,72.205-32.391,72.205-72.205 C472.615,347.531,414.627,268.57,333.187,237.405z M164.103,131.282c0-50.672,41.225-91.897,91.897-91.897 s91.897,41.225,91.897,91.897S306.672,223.18,256,223.18S164.103,181.954,164.103,131.282z M400.41,472.615H111.59 c-18.097,0-32.82-14.723-32.82-32.821c0-97.726,79.504-177.231,177.231-177.231s177.231,79.504,177.231,177.231 C433.231,457.892,418.508,472.615,400.41,472.615z" />
+                  </svg>
+                </div>
+                <span>Контрагенты</span>
+              </a>
+            </div>
+            <div class="sidebar__item">
+              <div id="headingTwo">
+                <a class="sidebar__link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+                  <div class="icon">
+                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 512 512"
+                      enable-background="new 0 0 512 512">
+                      <polygon points="352,208 352,256 352,272 448,272 448,256 416.721,208  " />
+                      <path
+                        d="m510.078,231.766l-47.82-80c-2.891-4.82-7.922-7.766-13.539-7.766h-128.719v-64c0-8.836-6.445-16-15.281-16h-288c-8.836,0-16.719,7.164-16.719,16v304c0,8.836 7.883,16 16.719,16h66.272c7.156,27.523 31.995,48 61.728,48 29.732,0 54.571-20.477 61.728-48h98.273 34.272c7.156,27.523 31.995,48 61.728,48 29.732,0 54.571-20.477 61.727-48h34.273c8.836,0 15.281-7.164 15.281-16v-144c-0.001-2.898-0.431-5.742-1.923-8.234zm-478.078-135.766h256v64 208h-81.554c-7.156-27.523-31.995-48-61.728-48-29.732,0-54.571,20.477-61.728,48h-50.99v-272zm112.719,320c-17.648,0-32-14.352-32-32s14.351-32 32-32c17.648,0 32,14.352 32,32s-14.352,32-32,32zm256,0c-17.648,0-32-14.352-32-32s14.352-32 32-32c17.648,0 32,14.352 32,32s-14.352,32-32,32zm79.281-48h-17.554c-7.156-27.523-31.995-48-61.727-48-29.733,0-54.571,20.477-61.728,48h-18.991v-192h119.656l40.344,68.43v123.57z" />
+                    </svg>
+                  </div>
+                  <span>Реестр техники</span>
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <ul>
+                  <li><a href="">Легковые</a></li>
+                  <li><a href="">Спецтехника</a></li>
+                  <li><a href="">Грузовые</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar__item">
+              <a href="" class="sidebar__link collapsed">
+                <div class="icon">
+                  <svg width="15" height="15" fill="currentColor" viewBox="0 0 512.064 512.064"
+                    style="enable-background:new 0 0 512.064 512.064;" xml:space="preserve">
+                    <path
+                      d="M482.595,1.647l-469.333,192c-19.739,8.075-16.722,36.919,4.261,40.734l220.136,40.025l40.025,220.136 c3.815,20.983,32.659,24,40.734,4.261l192-469.333C517.58,11.962,500.103-5.516,482.595,1.647z M306.592,415.024l-29.597-162.782 c-1.589-8.742-8.431-15.584-17.173-17.173L97.04,205.472L451.666,60.398L306.592,415.024z" />
+                  </svg>
+                </div>
+                <span>Путевые листы</span>
+              </a>
+            </div>
+            <div class="sidebar__item">
+              <a href="" class="sidebar__link collapsed">
+                <div class="icon">
+                  <svg width="15" height="15" fill="currentColor" viewBox="0 0 334 334"
+                    style="enable-background:new 0 0 334 334;" xml:space="preserve">
+                    <path
+                      d="M298.6,84.4c0.4-0.4,0.4-0.4,0-0.8c0-0.4-0.4-0.8-0.4-1.2c0-0.4-0.4-0.4-0.4-0.8c0-0.4-0.4-0.8-0.4-1.2 c0-0.4-0.4-0.4-0.4-0.8c-0.4-0.4-0.4-0.8-0.8-0.8l-76-76c-0.4-0.4-1.2-0.8-1.6-1.2c-0.4,0-0.4-0.4-0.8-0.4 c-0.4-0.4-0.8-0.4-1.2-0.4c-0.4,0-0.4,0-0.8-0.4c-0.4,0-0.8-0.4-1.2-0.4c-0.4,0-1.2,0-1.6,0h-0.4H73.8C63,0,53.4,4.4,46.2,11.6 C39,18.4,35,28.4,35,38.8v256c0,10.8,4.4,20.4,11.6,27.6c7.2,7.2,16.8,11.6,27.6,11.6h186.4c10.8,0,20.4-4.4,27.6-11.6 c6.8-7.2,10.8-17.2,10.8-27.6V86.4C299,85.6,299,84.8,298.6,84.4z M222.6,34.8L264.2,76h-22.8c-5.2,0-9.6-2-13.2-5.6 c-3.2-3.2-5.6-8-5.6-13.2V34.8z M278.6,294.8c0,5.2-2,9.6-5.6,13.2c-3.2,3.2-8,5.6-13.2,5.6h-186c-5.2,0-9.6-2-13.2-5.6 c-3.2-3.2-5.6-8-5.6-13.2v-256c0-5.2,2-9.6,5.6-13.2c3.2-3.2,8-5.6,13.2-5.6h128.4v37.2c0,10.8,4.4,20.4,11.6,27.6 s16.8,11.6,27.6,11.6h37.2V294.8z" />
+                    <path
+                      d="M241,123.6H93c-5.6,0-10.4,4.4-10.4,10.4S87,144.4,93,144.4h148c5.6,0,10.4-4.4,10.4-10.4S247,123.6,241,123.6z" />
+                    <path
+                      d="M241,189.2H93c-5.6,0-10.4,4.4-10.4,10.4c0,5.6,4.4,10.4,10.4,10.4h148c5.6,0,10.4-4.4,10.4-10.4 C251,194,246.6,189.2,241,189.2z" />
+                    <path
+                      d="M241,254.8H93c-5.6,0-10.4,4.4-10.4,10.4c0,5.6,4.4,10.4,10.4,10.4h148c5.6,0,10.4-4.4,10.4-10.4 C251,259.6,246.6,254.8,241,254.8z" />
+                  </svg>
+                </div>
+                <span>ТТН</span>
+              </a>
+            </div>
+            <div class="sidebar__item">
+              <a href="" class="sidebar__link collapsed">
+                <div class="icon">
+                  <svg width="15" height="15" fill="currentColor" viewBox="0 0 294.465 294.465"
+                    style="enable-background:new 0 0 294.465 294.465;">
+                    <path
+                      d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2 c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8 s55.6-12,74.8-31.2c19.2-19.2,31.2-45.6,31.2-74.8C253.232,148.465,206.032,78.865,174.432,32.465z M207.632,248.865 c-15.6,15.6-36.8,24.8-60.4,24.8c-23.6,0-44.8-9.6-60.4-24.8c-15.6-15.6-24.8-36.8-24.8-60.4c0-33.6,45.2-100.4,75.2-144.8 c3.6-5.2,6.8-10.4,10-14.8c3.2,4.4,6.4,9.6,10,14.8c30,44.8,75.2,111.2,75.2,144.8 C232.432,212.065,222.832,233.265,207.632,248.865z" />
+                    <path
+                      d="M209.232,181.265c-5.6-0.4-10.4,4-10.8,9.6c-0.4,8.8-3.2,17.2-7.6,24.4c-4.4,7.2-10.8,13.6-18.4,17.6 c-4.8,2.8-6.8,9.2-4,14c3.2,5.6,9.6,7.2,14.4,4.4c10.8-6,19.6-14.8,25.6-24.8c6.4-10,10-22,10.4-34.4 C219.232,186.465,214.832,181.665,209.232,181.265z" />
+                  </svg>
+                </div>
+                <span>Заправки</span>
+              </a>
+            </div>
+          </div>
+
+          <button id="sidebarToggle" class="sidebarToggle"></button>
+
+        </ul>
+      </aside>
+      <div class="content-wrapper">
+        <div class="content">
+          <nav class="navbar navbar-expand">
+            <button class="sidebarToggle sidebar--mob" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></button>
+            <h1 class="title">Путевой лист экскаватора САТ 320dl, 3387мм 716</h1>
+            <ul class="navbar-nav topbar ms-auto">
+              <li class="dropdown">
+                <button class="dropdown-toggle no-arrow" type="button" id="dropdownMenu1" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="icon-idea"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end animated--grow-in" aria-labelledby="dropdownMenu1">
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div>
+                      1
+                    </div>
+                  </a>
+                </ul>
+              </li>
+              <li class="dropdown alerts">
+                <button class="dropdown-toggle no-arrow" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="icon-alert"></i>
+                  <span class="badge-counter">1</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end animated--grow-in" aria-labelledby="dropdownMenu2">
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div>
+                      <div class="small">Июнь 1, 2021</div>
+                      <span>Отчет готов к загрузке!</span>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div>
+                      <div class="small">Июнь 2, 2021</div>
+                      <span>Отчет готов к загрузке!</span>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div>
+                      <div class="small">Июнь 3, 2021</div>
+                      <span>Отчет готов к загрузке!</span>
+                    </div>
+                  </a>
+                </ul>
+              </li>
+              <li class="dropdown settings">
+                <button class="dropdown-toggle no-arrow" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="icon-option"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end animated--grow-in" aria-labelledby="dropdownMenu2">
+                  <li><button class="dropdown-item" type="button">Настройки 1</button></li>
+                  <li><button class="dropdown-item" type="button">Настройки 2</button></li>
+                  <li><button class="dropdown-item" type="button">Настройки 3</button></li>
+                </ul>
+              </li>
+              <li class="dropdown profile">
+                <button class="dropdown-toggle no-arrow" aria-haspopup="true" aria-expanded="false" type="button"
+                  id="dropdownMenu3" data-display="static" data-bs-toggle="dropdown">
+                  <img class="img-profile rounded-circle" src="img/user.png">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end animated--grow-in" aria-labelledby="dropdownMenu3">
+                  <li><button class="dropdown-item" type="button">Профиль</button></li>
+                  <li><button class="dropdown-item" type="button">Настройки</button></li>
+                  <div class="dropdown-divider"></div>
+                  <li><button class="dropdown-item" type="button">Выйти</button></li>
+                </ul>
+              </li>
+
+
+            </ul>
+
+          </nav>
+
+          <div class="content-wrap">
+            <div class="row mb-1">
+              <div class="col-md-6">
+                <div class="input-wrapper calendar">
+                  <input class="form-control js-datepicker" type='text' placeholder="Выберите дату">
+                  <i class="icon-calendar"></i>
+                </div>
+                <div class="property__inner pt-1">
+                  <div class="property">
+                    <label for="">Вместимость ковша</label>
+                    <div class="property__input">
+                      <input type="text" class="form-control" value="1,5" maxlength="3" placeholder="1,5">
+                      <span>м³</span>
+                    </div>
+                  </div>
+                  <div class="property">
+                    <label for="">Вес автомобиля</label>
+                    <div class="property__input">
+                      <input type="text" class="form-control" value="21" maxlength="2" placeholder="21">
+                      <span>т</span>
+                    </div>
+                  </div>
+                </div>
+                <div id="select-driver">
+                  <div class="row m-0 p-0 select-main">
+                    <label for="">Водитель/механизатор</label>
+                    <v-select class="select-chooser" :options="driver" :components="{OpenIndicator}"
+                      placeholder="Начните вводить Фамилию или табельный номер" />
+                  </div>
+                </div>
+
+                <div class="btn-group py-2">
+                  <a href="#" class="btn btn-change active">1 смена</a>
+                  <a href="#" class="btn btn-change">2 смены</a>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="table__wrap">
+              <h2 class="table__name my-1">
+                Работа водителя и автомобиля
+              </h2>
+              <div class="table-responsive table-driver">
+                <table class="table table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th class="col-3" scope="col">
+                        <div class="table__header">
+                          Операция
+                        </div>
+                      </th>
+                      <th class="col-3" scope="col">
+                        <div class="table__header">
+                          Нулевой пробег, км
+                        </div>
+                      </th>
+                      <th class="col-3" scope="col">
+                        <div class="table__header">
+                          Показания спидометра, км
+                        </div>
+                      </th>
+                      <th class="col-3" scope="col">
+                        <div class="table__header">
+                          Время факт. Число,месяц, год
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <span class="table__text">
+                          Выезд из гаража
+                        </span>
+                      </th>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="21" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="21" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex justify-content-center">
+                          <div class="input-wrapper calendar me-2">
+                            <input class="form-control js-datepicker" type='text' placeholder="Выберите дату">
+                            <i class="icon-calendar"></i>
+                          </div>
+                          <div class="input-wrapper time">
+                            <input type="time" class="form-control" placeholder="Введите время">
+                            <i class="icon-time"></i>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="table__text">
+                          Возвращение в гараж
+                        </span>
+                      </th>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="21" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="21" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex justify-content-center">
+                          <div class="input-wrapper calendar me-2">
+                            <input class="form-control js-datepicker" type='text' placeholder="Выберите дату">
+                            <i class="icon-calendar"></i>
+                          </div>
+                          <div class="input-wrapper time">
+                            <input type="time" class="form-control" placeholder="Введите время">
+                            <i class="icon-time"></i>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="table__wrap">
+              <h2 class="table__name my-1 ">
+                Отработанное время
+              </h2>
+              <div class="table-responsive">
+                <table class="table table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        <div class="table__header">
+                          Сдельная, час
+                        </div>
+                      </th>
+                      <th scope="col">
+                        <div class="table__header">
+                          Охрана, час
+                        </div>
+                      </th>
+                      <th scope="col">
+                        <div class="table__header">
+                          ТО/Ремонт, час
+                        </div>
+                      </th>
+                      <th scope="col">
+                        <div class="table__header">
+                          Переезд, час
+                        </div>
+                      </th>
+                      <th scope="col">
+                        <div class="table__header">
+                          Доп. работы, час
+                        </div>
+                      </th>
+                      <th scope="col">
+                        <div class="table__header">
+                          Актировано, час
+                        </div>
+                      </th>
+                      <th scope="col">
+                        <div class="table__header">
+                          Стажировка, час
+                        </div>
+                      </th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="8" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="2" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="2" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="table-input middle">
+                          <input class="form-control" value="" maxlength="3" placeholder="Введите значение">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table__total">
+                Итого:
+                <span>12 ч</span>
+              </div>
+            </div>
+            <div class="accordion accordion-main" id="accordion2">
+              <div class="accordion-main__item">
+                <h2 class="accordion-header" id="heading1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                    aria-expanded="true" aria-controls="collapse1">
+                    Учет горючего
+                  </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1">
+                  <div class="accordion-body">
+                    <div id="table-fuel-app">
+                      <div class="table-fuel">
+                        <table class="table table-borderless mb-0">
+                          <thead>
+                            <tr>
+                              <th colspan="7">
+                                <div class="table__header">
+                                  <span class="name">Движение</span>
+                                </div>
+                              </th>
+                              <th colspan="2">
+                                <div class="table__header">
+                                  <span class="name">Время работы ч,мин</span>
+                                </div>
+                              </th>
+                              <th colspan="2">
+                                <div class="table__header">
+                                  <span class="name">Расход горючего, л</span>
+                                </div>
+                              </th>
+
+                            </tr>
+                            <tr>
+                              <th class="col-2" colspan="2">
+                                <div class="table__header-middle">
+                                  <span>Горючее</span>
+                                </div>
+                              </th>
+                              <th colspan="1">
+
+                              </th>
+                              <th colspan="2">
+                                <div class="table__header-middle">
+                                  <span>Остаток при</span>
+                                </div>
+                              </th>
+                              <th colspan="2">
+
+                              </th>
+
+
+                            </tr>
+                            <tr>
+                              <th>
+                                <div class="table__header-small">
+                                  <span>Марка</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-small">
+                                  <span>Код марки</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-large">
+                                  <span>Выдано<br>
+                                    литров</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-small">
+                                  <span>Выезде, л</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-small">
+                                  <span>Возврате, л</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-large">
+                                  <span>Сдано,<br>
+                                    литров</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-large">
+                                  <span>Коэффиц-нт<br>
+                                    изменения<br>
+                                    нормы</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-large">
+                                  <span>Спецобору-<br>
+                                    дования</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-large">
+                                  <span>Двигателя</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-large">
+                                  <span>По норме</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-large">
+                                  <span>Фактически</span>
+                                </div>
+                              </th>
+
+                            </tr>
+
+
+
+
+                          </thead>
+
+                          <tbody>
+                            <tr v-if="items.length > 0" v-for="(item, index) in items" :key="index">
+                              <td>
+                                <v-select class="select-chooser" :options="petrol" :components="{OpenIndicator}"
+                                  placeholder="Бензин" />
+                              </td>
+                              <td>
+                                <v-select class="select-chooser" :options="petrolСode" :components="{OpenIndicator}"
+                                  placeholder="АИ-80" />
+                              </td>
+                              <td>
+                                <div class="table-input small">
+                                  <input v-model="item.liters" class="form-control" value="0" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input small">
+                                  <input v-model="item.departure" class="form-control" value="0" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input small">
+                                  <input v-model="item.return" class="form-control" value="0" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input small">
+                                  <input v-model="item.litersHanded" class="form-control" value="0" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input small">
+                                  <input v-model="item.coefficient" class="form-control" value="2" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input small">
+                                  <input v-model="item.special" class="form-control" value="4" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input small">
+                                  <input v-model="item.engine" class="form-control" value="7" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input small">
+                                  <input v-model="item.norm" class="form-control" value="" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input small">
+                                  <input v-model="item.actually" class="form-control" value="0" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <button class="btn btn-del" @click="removeItem" title="Удалить">
+                                  <i class="icon-del"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="pt-2">
+                        <button class="btn btn-add" @click="AddItem" title="Добавить">Добавить</button>
+                      </div>
+                    </div>
+
+
+                    <div class="ps-2 pe-2 py-2">
+                      <div id="select-gasoline">
+                        <div class="select-row">
+                          <div class="row select-main">
+                            <label>Бензовоз</label>
+                            <v-select class="select-chooser" :options="gasoline" :components="{OpenIndicator}"
+                              placeholder="Введите гос. номер бензовоза для поиска" />
+                          </div>
+                          <div class="row select-main">
+                            <label>Водитель бензовоза</label>
+                            <v-select class="select-chooser" :options="driver" :components="{OpenIndicator}"
+                              placeholder="Введите фамилию водителя для поиска" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="fuel-wrap">
+                        <label class="switch-main checkbox_switch">
+                          <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"
+                            autocomplete="off" />
+                          <label for="someSwitchOptionSuccess" class="label-success"></label>
+                          <span>Производился слив топлива</span>
+                        </label>
+
+                        <div class="inner">
+                          <div id="apps">
+                            <div v-if="divs.length > 0" v-for="(div, index) in divs" :key="index">
+                              <div class="select-row p-0">
+                                <div class="row m-0 p-0 me-4 select-main">
+                                  <label>Кому/Куда</label>
+                                  <v-select class="select-chooser" :options="options" label="objectNumber"
+                                    :components="{OpenIndicator}"
+                                    placeholder="Введите гос. номер ТС или название объекта" />
+                                </div>
+
+                                <div class="table-mark">
+                                  <table class="table table-borderless mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th class="col-4" scope="col">
+                                          <div class="table__header">
+                                            Марка
+                                          </div>
+                                        </th>
+                                        <th class="col-4" scope="col">
+                                          <div class="table__header">
+                                            Код марки
+                                          </div>
+                                        </th>
+                                        <th class="col-4" scope="col">
+                                          <div class="table__header">
+                                            Слито литров
+                                          </div>
+                                        </th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          <v-select class="select-chooser" :options="petrol"
+                                            :components="{OpenIndicator}" placeholder="Бензин" />
+                                        </td>
+                                        <td>
+                                          <v-select class="select-chooser" :options="petrolСode"
+                                            :components="{OpenIndicator}" placeholder="АИ-80" />
+                                        </td>
+                                        <td>
+                                          <div class="table-input">
+                                            <input v-model="div.liters" class="form-control" value="50" maxlength="3"
+                                              placeholder="Введите значение">
+                                          </div>
+                                        </td>
+                                        <td>
+
+                                          <button class="btn btn-del" @click="deleteRow" title="Удалить">
+                                            <i class="icon-del"></i>
+                                          </button>
+                                        </td>
+
+                                      </tr>
+                                    </tbody>
+                                  </table>
+
+                                </div>
+                              </div>
+
+
+                            </div>
+
+                            <div class="py-2">
+                              <button class="btn btn-add" @click="addRow">Добавить</button>
+                            </div>
+
+                          </div>
+
+
+                        </div>
+
+
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-main__item">
+                <h2 class="accordion-header" id="heading2">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                    aria-expanded="true" aria-controls="collapse2">
+                    Выполненные задания
+                  </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2">
+                  <div class="accordion-body">
+                    <div class="trailer-wrap ps-2 pe-2">
+                      <label class="switch-main checkbox_switch">
+                        <input id="trailer" type="checkbox" autocomplete="off" />
+                        <label for="trailer" class="label-success"></label>
+                        <span>Работал с прицепом</span>
+                      </label>
+
+
+                      <div class="inner">
+                        <div id="select-trailer">
+                          <div class="row m-0 p-0 me-4 select-main">
+                            <label>Прицеп</label>
+                            <v-select class="select-chooser" :options="trailer" :components="{OpenIndicator}"
+                              placeholder="Введите гос. номер прицепа" />
+                          </div>
+                        </div>
+                        <div class="property__inner pt-2">
+                          <div class="property">
+                            <label for="">Грузоподъемность</label>
+                            <div class="property__input">
+                              <input type="text" class="form-control" value="15" maxlength="3" placeholder="1,5">
+                              <span>т</span>
+                            </div>
+                          </div>
+                          <div class="property">
+                            <label for="">Вес прицепа</label>
+                            <div class="property__input">
+                              <input type="text" class="form-control" value="10" maxlength="2" placeholder="21">
+                              <span>т</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div id="table-tasks-app">
+                      <div class="table__tasks">
+                        <table class="table table-borderless mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col">
+
+                              </th>
+
+                              <th class="col-4" colspan="2">
+                                <div class="table__header">
+                                  <span class="name">Адрес пукнта</span>
+                                </div>
+                              </th>
+                              <th colspan="4">
+                              </th>
+                              <th class="col-2" colspan="2">
+                                <div class="table__header">
+                                  <span class="name">Перевезено, т</span>
+                                </div>
+                              </th>
+                              <th colspan="2">
+                                <div class="table__header">
+                                  <span class="name">Погрузка</span>
+                                </div>
+                              </th>
+
+                            </tr>
+
+                            <tr>
+                              <th scope="col">
+                                <div class="table__header m">
+
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div class="table__header-small m">
+                                  <span>Погрузки</span>
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div class="table__header-small m">
+                                  <span>Выгрузки</span>
+                                </div>
+                              </th>
+                              <th class="col-1" scope="col">
+                                <div class="table__header m">
+                                  <p class="m-0">Грузоподъ-<br>
+                                    ёмность,<br>
+                                    тонн</p>
+                                </div>
+                              </th>
+                              <th class="col-2" scope="col">
+                                <div class="table__header m">
+                                  <p class="m-0">Тип груза</p>
+                                </div>
+                              </th>
+                              <th class="col-1" scope="col">
+                                <div class="table__header m">
+                                  <p class="m-0">Кол-во<br>
+                                    ездок</p>
+                                </div>
+                              </th>
+                              <th class="col-1" scope="col">
+                                <div class="table__header m">
+                                  <p class="m-0">
+                                    Рассто-<br>
+                                    яние, м
+                                  </p>
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div class="table__header-small m">
+                                  <span>Всего</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-small m">
+                                  <span>в т.ч. на прицепах</span>
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div class="table__header-small m">
+                                  <span>Спецтехника</span>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="table__header-small m">
+                                  <span>Механизатор</span>
+                                </div>
+                              </th>
+                              <th scope="col">
+
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr v-if="items.length > 0" v-for="(item, index) in items" :key="index">
+                              <th scope="row">
+                                <div class="table__controls">
+                                  <button class="btn btn-copy">
+                                    <i class="icon-copy"></i>
+                                  </button>
+                                  <button class="btn btn-moving">
+                                    <i class="icon-moving"></i>
+                                  </button>
+                                </div>
+
+                              </th>
+                              <td>
+                                <div class="table-input">
+                                  <input v-model="item.lading" class="form-control" value="Карьер" type="text"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input">
+                                  <input v-model="item.unloading" class="form-control" value="Насыпь" type="text"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input">
+                                  <input v-model="item.name" class="form-control" value="20" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <v-select class="select-chooser" :options="cargo" :components="{OpenIndicator}"
+                                  placeholder="Песок" />
+                              </td>
+                              <td>
+                                <div class="table-input">
+                                  <input v-model="item.trains" class="form-control" value="10" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input">
+                                  <input v-model="item.distance" class="form-control" value="1500" maxlength="4"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input">
+                                  <input v-model="item.transportTotal" class="form-control" value="200" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input">
+                                  <input v-model="item.transporttrailer" class="form-control" value="50" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <v-select class="select-chooser" :options="specialEquipment"
+                                  :components="{OpenIndicator}" placeholder="САТ 320dl" />
+                              </td>
+                              <td>
+                                <v-select class="select-chooser" :options="machineOperator"
+                                  :components="{OpenIndicator}" placeholder="Стрельцов Иван Игнатьевич" />
+                              </td>
+                              <td>
+                                <button class="btn btn-del" @click="removeItem" title="Удалить">
+                                  <i class="icon-del"></i>
+                                </button>
+                              </td>
+                            </tr>
+
+
+                          </tbody>
+                        </table>
+
+                      </div>
+                      <div class="pt-2">
+                        <button class="btn btn-add" @click="AddItem" title="Добавить">Добавить</button>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="accordion-main__item">
+                <h2 class="accordion-header" id="heading3">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                    aria-expanded="true" aria-controls="collapse3">
+                    Обслуживание техники - Выполненные ремонтные работы и работы по ТО
+                  </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse show" aria-labelledby="heading3">
+                  <div class="accordion-body">
+                    <div id="table-service-app">
+                      <div class="table-service">
+                        <table class="table table-borderless mb-0">
+                          <thead>
+                            <tr>
+                              <th class="col-3" scope="col">
+                                <div class="table__header">
+                                  Исполнитель/контрагент
+                                </div>
+                              </th>
+                              <th class="col-2" scope="col">
+                                <div class="table__header">
+                                  Тип работ
+                                </div>
+                              </th>
+                              <th class="col-2" scope="col">
+                                <div class="table__header">
+                                  Стоимость, руб
+                                </div>
+                              </th>
+                              <th class="col-2" scope="col">
+                                <div class="table__header">
+                                  Продолжительность, ч
+                                </div>
+                              </th>
+                              <th class="col-3" scope="col">
+                                <div class="table__header">
+                                  Примечание
+                                </div>
+                              </th>
+                              <th class="col" scope="col">
+
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr v-if="items.length > 0" v-for="(item, index) in items" :key="index">
+                              <th scope="row">
+                                <v-select class="select-chooser" :options="executor" :components="{OpenIndicator}"
+                                  placeholder="ООО Контрагент по ремонту" />
+                              </th>
+                              <td>
+                                <v-select class="select-chooser" :options="work" :components="{OpenIndicator}"
+                                  placeholder="Ремонт" />
+                              </td>
+                              <td>
+                                <div class="table-input">
+                                  <input v-model="item.name" class="form-control" value="80 000" maxlength="6"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input">
+                                  <input v-model="item.amount" class="form-control" value="7" maxlength="3"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="table-input">
+                                  <input v-model="item.note" class="form-control" value="Введите значение"
+                                    placeholder="Введите значение">
+                                </div>
+                              </td>
+                              <td>
+                                <button class="btn btn-del" @click="removeItem" title="Удалить">
+                                  <i class="icon-del"></i>
+                                </button>
+                              </td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="pt-2">
+                        <button class="btn btn-add" @click="AddItem" title="Добавить">Добавить</button>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <button class="btn btn-cancel me-4">Отмена</button>
+                <button class="btn btn-add__fat ms-3">Добавить</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <script src="https://unpkg.com/vue@latest"></script>
+      <script src="https://unpkg.com/vue-select@latest"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="js/vendor.js"></script>
+      <script src="js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+</body>
+
+</html>
